@@ -1,0 +1,67 @@
+/*
+Colores
+  Tarjetas
+    Red: hsl(0, 78%, 62%)
+    Cyan: hsl(180, 62%, 55%)
+    Orange: hsl(34, 97%, 64%)
+    Blue: hsl(212, 86%, 64%)
+  Sombra
+    Dark Blue: hsl(240, 25%, 50%) al 20% de opacidad;
+  Texto
+    Grey: hsl(229, 6%, 66%)
+  Fondo de la tarjeta y del background
+    White: hsl(0, 0%, 93%)
+
+Fuente de la página
+  https://fonts.google.com/specimen/Poppins
+  Estilos 200, 400 y 600
+*/
+
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+}
+
+.main-tittle {
+  display: block;
+  font-size: 2.5rem;
+}
+
+.subtittle {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cards {
+  width: 1200px;
+  height: 550px;
+  position: relative;
+  margin: 5em auto;
+}
+
+.card {
+  position: absolute;
+  width: 350px;
+  height: 250px;
+  background-color: hsl(0, 0%, 93%);
+}
+
+.card-left {
+  left: 0;
+  top: 150px;
+}
+
+.card-top {
+  top: 0;
+  left: 425px;
+}
+.card-bottom {
+  bottom: 0;
+}
+.card-right {
+  right: 0;
+  top: 150px;
+}

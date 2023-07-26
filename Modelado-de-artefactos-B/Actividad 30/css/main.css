@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,600;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
+/* &------------------------------------------------------------------------------------------------------ */
+
+:root {
+  /*Fuentes*/
+  --fn-Shantell-sans: "Shantell Sans";
+  --fn-Raleway: "Raleway", arial;
+  --fn-Rubik: "Rubik", arial;
+  --bg-C: rgb(207, 207, 207);
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+/* ! Navbar */
+
+.navbar {
+  min-height: 100px;
+  padding: 2rem;
+  background-color: black;
+  color: white;
+  border-bottom: 5px white double;
+}
+
+.navbar div .navbar-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ico-navbar {
+  color: white;
+  font-size: 45px;
+}
+
+#navbar-icoP {
+  width: 50px;
+}
+
+/* ! link hover navbar */
+
+.navbar ul li a:link,
+.navbar ul li a:visited,
+.navbar ul li a:active {
+  color: white;
+  transition: 0.2s ease;
+}
+
+.navbar ul li a:hover {
+  color: lawngreen;
+  text-shadow: 1px 1px 1px rgb(113, 252, 0);
+}
+
+.navbar div a:link,
+.navbar div a:visited,
+.navbar div a:active {
+  font-family: var(--fn-Raleway);
+  color: white;
+  transition: 0.3s ease;
+}
+
+.navbar div a:hover {
+  color: rgb(237, 11, 11);
+  text-shadow: 1px 1px 1px rgb(252, 67, 0);
+}
+
+/* !----------------------------------------------------------------------------------------------------------------- */
+
+/* Juego con los fondos */
+
+.section-wrapper {
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url(../img/Img-bg/All-characters.jpg);
+}
+
+.section-wrapper .bg-wrapper-separator {
+  color: whitesmoke;
+  min-height: 100vh;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-separator {
+  background-size: cover;
+  background-attachment: fixed;
+  height: 30px;
+}
+
+.section-separator-one {
+  background-image: url(../img/Img-bg/Lumine.jpg);
+}
+
+.section-separator-two {
+  background-image: url(../img/Img-bg/Diluc.jpg);
+}
+
+.section-separator-three {
+  background-image: url(../img/Img-bg/Mona.jpg);
+}
+
+/* !----------------------------------------------------------------------------------------------------------------- */
+
+/* !----------------------------------------------------------------------------------------------------------------- */
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: var(--fn-Raleway);
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: var(--fn-Rubik);
+  padding: 10px;
+}
+
+.imagen-perfil {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+
+.hero-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 60px;
+}
+
+.habilities {
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.5);
+  width: 64px;
+  height: 64px;
+}
+
+/* !----------------------------------------------------------------------------------------------------------------- */
+
+footer {
+  border-top: 5px white double;
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+footer h3 {
+  margin-top: 15px;
+}
+
+footer .link-container {
+  display: inline-block;
+  margin: 15px 5px 0px 5px;
+}
+
+footer .wrapper-footer {
+  margin-left: 50px;
+  text-align: center;
+}
+
+footer img {
+  width: 100px;
+}
+
+footer p {
+  margin: auto;
+  font-family: var(--fn-Raleway);
+  font-size: medium;
+  text-transform: uppercase;
+}
+
+footer a:link,
+footer a:visited,
+footer a:active {
+  text-decoration: none;
+  font-family: var(--fn-Raleway);
+  color: rgb(255, 255, 255);
+  transition: 0.2s ease;
+}
+
+footer a:hover {
+  color: lawngreen;
+  text-shadow: 1px 1px 1px rgb(113, 252, 0);
+}
+
+/* ?-------------------------------------------------------------------- */
+
+@media screen and (max-width: 991px) {
+  footer {
+    height: 125px;
+    position: relative;
+    display: block;
+  }
+
+  footer p {
+    background-color: black;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  footer .wrapper-footer {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer h3 {
+    margin-top: 25px;
+  }
+
+  footer .link-container {
+    margin-top: 26px;
+  }
+
+  footer img {
+    position: absolute;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .icocenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer {
+    height: 120px;
+    position: relative;
+    display: block;
+  }
+
+  footer p {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  footer .wrapper-footer {
+    margin: 0%;
+    display: block;
+  }
+
+  footer h3 {
+    margin-top: 0px;
+  }
+
+  footer img {
+    width: 0px;
+    height: 0px;
+  }
+  footer .link-container {
+    margin-top: 10px;
+  }
+}

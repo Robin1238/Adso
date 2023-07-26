@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,600;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
+/* ¿ /////////////////////////////////////////////////////////////////Variables */
+
+:root {
+  /*Fuentes*/
+  --fn-Shantell-sans: "Shantell Sans";
+  --fn-Raleway: "Raleway";
+  --fn-Rubik: "Rubik";
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+h1 {
+  font-family: var(--fn-Raleway);
+  font-size: 3rem;
+  color: whitesmoke;
+}
+
+header {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 5px black solid;
+  list-style: none;
+}
+
+/* !------------------------------------------------------------------------------------ */
+
+nav ul li a:link,
+nav ul li a:visited,
+nav ul li a:active {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: var(--fn-Raleway);
+  color: black;
+  transition: 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: lawngreen;
+}
+
+/* !------------------------------------------------------------------------------------ */
+
+.section-one article div {
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 5px;
+  margin: auto;
+  width: 80%;
+  background-color: rgb(226, 226, 226);
+}
+.section-one article div p {
+  font-family: var(--fn-Rubik);
+  font-weight: bold;
+}
+
+.section-one article aside {
+  display: block;
+  margin: 0px 5px;
+  background-color: rgb(226, 226, 226);
+  border-radius: 20px;
+}
+
+.section-one article aside h5 {
+  font-weight: bolder;
+  margin-top: 15px;
+  color: rgb(97, 0, 139);
+}
+
+.section-one article aside ul {
+  padding: 0%;
+  width: max-content;
+  margin: auto;
+  list-style: none;
+}
+
+/* !------------------------------------------------------------------------------------ */
+
+aside ul li a:link,
+aside ul li a:visited,
+aside ul li a:active {
+  text-decoration: none;
+  font-family: var(--fn-Raleway);
+  color: black;
+  transition: 0.2s ease;
+}
+
+aside ul li a:hover {
+  color: lawngreen;
+}
+
+/* !------------------------------------------------------------------------------------ */
+
+.section-two {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  background-color: rgb(226, 226, 226);
+  border-radius: 20px;
+}
+
+.card-container {
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.card-container .card {
+  position: relative;
+  font-family: var(--fn-Shantell-sans);
+  margin: 5px;
+  border: 5px solid black;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px 15px 15px 15px;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 10%,
+    rgb(0, 0, 0.5) 50%,
+    black 95%
+  );
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card-container .card img:first-child {
+  box-shadow: 0px 60px 60px -60px black;
+  border-radius: 15px 15px 0px 0px;
+  transition: 0.3s ease;
+}
+
+.card-container .card .imagen-two {
+  position: absolute;
+  max-width: 200px;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+  transform: translateY(25%);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: perspective(250px) rotateX(5deg);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover .imagen-two {
+  opacity: 1;
+  transform: translateY(-1%);
+}
+
+.separador-de-bugs {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 5px auto;
+  border-top: 5px black solid;
+  border-bottom: 5px black solid;
+  height: 85px;
+}
+/* !------------------------------------------------------------------------------------ */
+
+footer {
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+footer h3 {
+  margin-top: 15px;
+}
+
+footer .link-container {
+  display: inline-block;
+  margin: 5px;
+}
+
+footer .wrapper-footer {
+  margin-left: 50px;
+  text-align: center;
+}
+
+footer img {
+  width: 100px;
+}
+
+footer p {
+  margin: auto;
+  font-family: var(--fn-Raleway);
+  font-size: medium;
+  text-transform: uppercase;
+}
+
+footer a:link,
+footer a:visited,
+footer a:active {
+  text-decoration: none;
+  font-family: var(--fn-Raleway);
+  color: rgb(255, 255, 255);
+  transition: 0.2s ease;
+}
+
+footer a:hover {
+  color: lawngreen;
+}
+/* !------------------------------------------------------------------------------------ */
+
+@media (max-width: 991px) {
+  .card:hover {
+    scale: 1.1;
+  }
+
+  .card:hover::before {
+    opacity: 0.8;
+  }
+
+  .card-container .card .imagen-two {
+    max-width: 0px;
+  }
+  .section-one article div {
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .section-one article aside ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .section-one article aside {
+    border-radius: 0;
+    margin: 5px 0 0 0;
+  }
+  .section-two {
+    border-radius: 0px;
+  }
+
+  footer {
+    height: 120px;
+    position: relative;
+    display: block;
+  }
+
+  footer p {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  footer .wrapper-footer {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer h3 {
+    margin-top: 25px;
+  }
+
+  footer .link-container {
+    margin-top: 26px;
+  }
+
+  footer img {
+    position: absolute;
+    width: 100px;
+  }
+}
+
+/* !------------------------------------------------------------------------------------ */
+
+@media (max-width: 1200px) and (min-width: 992px) {
+  .section-one article div {
+    width: 100%;
+  }
+
+  .card-container .card .imagen-two {
+    max-width: 150px;
+  }
+
+  .section-one article aside ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .section-one article aside {
+    margin: 5px 5px;
+  }
+}
+
+/* !---------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  footer {
+    height: 120px;
+    position: relative;
+    display: block;
+  }
+
+  footer p {
+    background-color: black;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  footer .wrapper-footer {
+    margin: 0%;
+    display: block;
+  }
+
+  footer img {
+    width: 0px;
+  }
+}
