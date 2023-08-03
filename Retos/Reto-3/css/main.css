@@ -20,7 +20,7 @@ Fuente de la página
 body {
   /* overflow: hidden; */
   width: 1400px;
-  margin: 5em auto;
+  margin: 1em auto;
   font-family: "Karla", sans-serif;
   background-color: hsl(0, 0%, 90%);
 }
